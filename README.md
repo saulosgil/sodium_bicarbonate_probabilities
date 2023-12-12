@@ -1,0 +1,16 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# Adverse effects of the Sodium Bicarbonate supplementation
+
+## Conditional probabilities
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of this project is to investigate if individuals who show
+(severe or frequent) adverse effects of sodium bicarbonate
+supplementation have a higher probability of showing more symptoms than
+those who show trivial adverse effects.
+
+**IN PROGRESS**
