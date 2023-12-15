@@ -43,7 +43,7 @@ df_selected
 # using prob function of the prob pkg
 prob(df_selected,
      event = mais_1_sint_mod == "teve",
-     given = teve_ao_menos_um_sint_mod == "teve_sintoma_sev")
+     given = teve_ao_menos_um_sint_mod == "teve_sintoma_mod")
 
 # resposta = 0.2954545 (29%)
 
@@ -81,6 +81,6 @@ df_selected
 # severe symptom
 prob(df_selected,
      event = mais_2_sint_mod == "teve",
-     given = teve_ao_menos_um_sint_mod == "teve_sintoma_sev")
+     given = teve_ao_menos_um_sint_mod == "teve_sintoma_mod")
 
 # resposta = 0.2272727 (22%)
