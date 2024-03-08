@@ -17,6 +17,9 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of this project is to investigate if individuals who show (severe or frequent) adverse effects of sodium bicarbonate supplementation have a higher probability of showing more symptoms than those who show trivial adverse effects.
+This repository consists of conditional probabilities to test if individuals who show
+(severe or frequent) adverse effects arising from sodium bicarbonate
+supplementation have a higher probability of showing more symptoms than
+those who show trivial adverse effects.
 
 **IN PROGRESS**
