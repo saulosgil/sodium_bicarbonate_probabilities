@@ -1,6 +1,5 @@
 # Libraries
 library(tidyverse)
-library(viridis)
 
 # Load and preprocessing ----------------------------------------------------------------------
 data <- read_delim(
@@ -37,7 +36,7 @@ glimpse(data)
 #              shape = 21,
 #              fill = "black",
 #              color = "black") +
-#   scale_size(range = c(6, 16),
+#   scale_size(range = c(2, 8),
 #              name = "Positive for symptoms") +
 #   scale_y_continuous(
 #     limits = c(-2, 12),
