@@ -3,7 +3,7 @@ library(tidyverse)
 
 # Load and preprocessing ----------------------------------------------------------------------
 data <- read_delim(
-  "data_bubleplot.csv",
+  "data_bubleplot_study1.csv",
   delim = ";",
   escape_double = FALSE,
   trim_ws = TRUE
@@ -47,7 +47,7 @@ glimpse(data)
 #   xlab("Time") +
 #   theme_bw() +
 #   theme(
-#     legend.position = "top"
+#     legend.position = "none"
 #   ) +
 #   facet_grid(Condition ~ .)
 
@@ -75,7 +75,7 @@ nausea <-
   xlab("Time") +
   labs(title = "Nausea") +
   theme_bw() +
-  theme(legend.position = "top") +
+  theme(legend.position = "none") +
   facet_grid(Condition ~ .)
 
 nausea
@@ -103,7 +103,7 @@ gastric_distress <-
   xlab("Time") +
   labs(title = "Gastric Distress") +
   theme_bw() +
-  theme(legend.position = "top") +
+  theme(legend.position = "none") +
   facet_grid(Condition ~ .)
 
 gastric_distress
@@ -131,7 +131,7 @@ bealching <-
   xlab("Time") +
   labs(title = "Belching")+
   theme_bw() +
-  theme(legend.position = "top") +
+  theme(legend.position = "none") +
   facet_grid(Condition ~ .)
 
 bealching
@@ -159,7 +159,7 @@ heartburn <-
   xlab("Time") +
   labs(title = "Heartburn")+
   theme_bw() +
-  theme(legend.position = "top") +
+  theme(legend.position = "none") +
   facet_grid(Condition ~ .)
 
 heartburn
@@ -187,7 +187,7 @@ bloating <-
   xlab("Time") +
   labs(title = "Bloating") +
   theme_bw() +
-  theme(legend.position = "top") +
+  theme(legend.position = "none") +
   facet_grid(Condition ~ .)
 
 bloating
@@ -215,7 +215,7 @@ flatulence <-
   xlab("Time") +
   labs(title = "Flatulence") +
   theme_bw() +
-  theme(legend.position = "top") +
+  theme(legend.position = "none") +
   facet_grid(Condition ~ .)
 
 flatulence
@@ -243,7 +243,7 @@ urge_defecate <-
   xlab("Time") +
   labs(title = "Urge to defecate") +
   theme_bw() +
-  theme(legend.position = "top") +
+  theme(legend.position = "none") +
   facet_grid(Condition ~ .)
 
 urge_defecate
@@ -271,7 +271,7 @@ intestine_upset <-
   xlab("Time") +
   labs(title = "Intestine upset") +
   theme_bw() +
-  theme(legend.position = "top") +
+  theme(legend.position = "none") +
   facet_grid(Condition ~ .)
 
 intestine_upset
@@ -299,7 +299,7 @@ dizziness <-
   xlab("Time") +
   labs(title = "Dizziness") +
   theme_bw() +
-  theme(legend.position = "top") +
+  theme(legend.position = "none") +
   facet_grid(Condition ~ .)
 
 dizziness
@@ -327,10 +327,37 @@ headache <-
   xlab("Time") +
   labs(title = "Headache") +
   theme_bw() +
-  theme(legend.position = "top") +
+  theme(legend.position = "none") +
   facet_grid(Condition ~ .)
 
 headache
+
+# layout --------------------------------------------------------------------------------------
+library(patchwork)
+
+plot <-
+  (nausea + gastric_distress) / (bealching + heartburn) / (bloating + flatulence) /
+  (urge_defecate + intestine_upset) / (dizziness + headache)
+
+ggsave(
+  filename = "plot.png",
+  width = 20,
+  height = 35,
+  dpi = 600,
+  limitsize = FALSE
+)
+
+plot_legend <-
+  (nausea + gastric_distress) / (bealching + heartburn) / (bloating + flatulence) /
+  (urge_defecate + intestine_upset) / (dizziness + headache)
+
+ggsave(
+  filename = "plot_legend.png",
+  width = 20,
+  height = 35,
+  dpi = 600,
+  limitsize = FALSE
+)
 
 
 
