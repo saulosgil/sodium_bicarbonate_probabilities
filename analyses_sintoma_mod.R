@@ -38,7 +38,7 @@ df_selected <- probspace(df_selected)
 df_selected
 
 # Probability of the individual to show more than 1 severe symptoms given that they showed at least
-# severe symptom
+# moderate symptom
 
 # using prob function of the prob pkg
 prob(df_selected,
@@ -78,7 +78,7 @@ df_selected <- probspace(df_selected)
 df_selected
 
 # Probability of the individual to show more than 2 severe symptoms given that they showed at least
-# severe symptom
+# moderate symptom
 prob(df_selected,
      event = mais_2_sint_mod == "teve",
      given = teve_ao_menos_um_sint_mod == "teve_sintoma_mod")
