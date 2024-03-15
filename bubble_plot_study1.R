@@ -64,7 +64,7 @@ nausea <-
     fill = "black",
     color = "black"
   ) +
-  scale_size(range = c(6, 14),
+  scale_size(range = c(2, 10), #6, 14
              name = "Positive for symptoms") +
   scale_y_continuous(
     limits = c(-2, 12),
@@ -92,7 +92,7 @@ gastric_distress <-
     fill = "black",
     color = "black"
   ) +
-  scale_size(range = c(6, 6),
+  scale_size(range = c(2, 2),#6, 6
              name = "Positive for symptoms") +
   scale_y_continuous(
     limits = c(-2, 12),
@@ -120,7 +120,7 @@ bealching <-
     fill = "black",
     color = "black"
   ) +
-  scale_size(range = c(6, 16),
+  scale_size(range = c(2, 12),#6, 16
              name = "Positive for symptoms") +
   scale_y_continuous(
     limits = c(-2, 12),
@@ -148,7 +148,7 @@ heartburn <-
     fill = "black",
     color = "black"
   ) +
-  scale_size(range = c(6, 8),
+  scale_size(range = c(2, 4), #6, 8
              name = "Positive for symptoms") +
   scale_y_continuous(
     limits = c(-2, 12),
@@ -176,7 +176,7 @@ bloating <-
     fill = "black",
     color = "black"
   ) +
-  scale_size(range = c(6, 12),
+  scale_size(range = c(2, 8),#6, 12
              name = "Positive for symptoms") +
   scale_y_continuous(
     limits = c(-2, 12),
@@ -204,7 +204,7 @@ flatulence <-
     fill = "black",
     color = "black"
   ) +
-  scale_size(range = c(6, 16),
+  scale_size(range = c(2, 8),#6, 12
              name = "Positive for symptoms") +
   scale_y_continuous(
     limits = c(-2, 12),
@@ -232,7 +232,7 @@ urge_defecate <-
     fill = "black",
     color = "black"
   ) +
-  scale_size(range = c(6, 14),
+  scale_size(range = c(2, 8),#6, 12
              name = "Positive for symptoms") +
   scale_y_continuous(
     limits = c(-2, 12),
@@ -260,7 +260,7 @@ intestine_upset <-
     fill = "black",
     color = "black"
   ) +
-  scale_size(range = c(6, 10),
+  scale_size(range = c(2, 8),#6, 12
              name = "Positive for symptoms") +
   scale_y_continuous(
     limits = c(-2, 12),
@@ -288,7 +288,7 @@ dizziness <-
     fill = "black",
     color = "black"
   ) +
-  scale_size(range = c(6, 8),
+  scale_size(range = c(2, 4),#6, 8
              name = "Positive for symptoms") +
   scale_y_continuous(
     limits = c(-2, 12),
@@ -316,7 +316,7 @@ headache <-
     fill = "black",
     color = "black"
   ) +
-  scale_size(range = c(6, 16),
+  scale_size(range = c(2, 12),#6, 16
              name = "Positive for symptoms") +
   scale_y_continuous(
     limits = c(-2, 12),
@@ -327,7 +327,7 @@ headache <-
   xlab("Time") +
   labs(title = "Headache") +
   theme_bw() +
-  theme(legend.position = "none") +
+  theme(legend.position = "top") +
   facet_grid(Condition ~ .)
 
 headache

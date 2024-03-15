@@ -276,5 +276,31 @@ headache <-
 
 headache
 
+# layout --------------------------------------------------------------------------------------
+library(patchwork)
 
+plot <-
+  (nausea + gastric_distress) / (bealching + intestinal_bloating) / (bloating + flatulence) /
+  (intestine_upset + headache)
+
+ggsave(
+  filename = "plot2.png",
+  width = 20,
+  height = 35,
+  dpi = 600,
+  limitsize = FALSE
+)
+
+plot <-
+  (nausea + gastric_distress) / (bealching + intestinal_bloating) / (bloating + flatulence) /
+  (intestine_upset + headache)
+
+
+ggsave(
+  filename = "plot_legend2.png",
+  width = 20,
+  height = 35,
+  dpi = 600,
+  limitsize = FALSE
+)
 
