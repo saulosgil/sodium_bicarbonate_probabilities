@@ -4,7 +4,8 @@ library(prob)
 library(dplyr)
 
 # reading dataset -----------------------------------------------------------------------------
-df <- read_excel("conditional_prob_study1.xlsx")
+df <- read_excel("study_2/conditional_prob_study2.xlsx",
+                 sheet = "sintoma_severo")
 
 # to show severe symptoms (>1) ----------------------------------------------------------------
 df_selected <-
@@ -44,7 +45,7 @@ prob(df_selected,
      event = mais_1_sint_sev == "teve",
      given = teve_ao_menos_um_sint_sev == "teve_sintoma_sev")
 
-# resposta = 0.2903226 (29%)
+# resposta = 0.3030303 (30%)
 
 # to show more than 2 severe symptoms ----------------------------------------------------------
 df_selected <-
@@ -82,4 +83,4 @@ prob(df_selected,
      event = mais_2_sint_sev == "teve",
      given = teve_ao_menos_um_sint_sev == "teve_sintoma_sev")
 
-# resposta = 0.1612903 (16%)
+# resposta = 0.2424242 (24%)
